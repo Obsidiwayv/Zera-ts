@@ -1,0 +1,20 @@
+{
+  "name": "zera",
+  "version": "1.0.0",
+  "description": "Zera",
+  "main": "./output/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wayv",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.3",
+    "@types/ws": "^8.5.5",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "eris": "^0.17.2",
+    "yaml": "^2.3.1"
+  }
+}
