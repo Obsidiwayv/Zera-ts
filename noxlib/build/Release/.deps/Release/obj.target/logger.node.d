@@ -1,1 +1,0 @@
-cmd_Release/obj.target/logger.node := g++ -o Release/obj.target/logger.node -shared -pthread -rdynamic -m64  -Wl,-soname=logger.node -Wl,--start-group Release/obj.target/logger/logs.o -Wl,--end-group -lnode

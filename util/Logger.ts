@@ -12,7 +12,7 @@ export default class {
     public WriteLog(level: string, message: string) {
         const data = `[${level.toUpperCase()}] >> ${message}\n`;
         try {
-            fs.writeFileSync(`${this.logdir}/log-${this.addr}.txt`, message);
+            fs.writeFileSync(`${this.logdir}/log-${this.addr}.txt`, data);
         } catch (err) {
             console.log("Unable to write to file: " + err);
         }

@@ -5,6 +5,9 @@ export interface IConfig {
     secrets: {
         token: string
     };
+    commands: {
+        prefix: string;
+    };
 };
 
 export function GetConfig(): IConfig {

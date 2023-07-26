@@ -1,7 +1,6 @@
 #include <nan.h>
 
 void CreateLog(const Nan::FunctionCallbackInfo<v8::Value>& content) {
-  printf("%s", content);
 }
 
 void Init(v8::Local<v8::Object> exports) {
