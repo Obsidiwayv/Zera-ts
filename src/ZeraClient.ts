@@ -1,7 +1,6 @@
 import Eris from "eris";
 import { GetConfig } from "../yaml";
 import Logger from "../util/Logger";
-import logger from "../logger/logger";
 
 const config = GetConfig();
 
