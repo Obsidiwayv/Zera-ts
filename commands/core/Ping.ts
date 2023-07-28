@@ -8,10 +8,10 @@ export = new BaseCommand({
         const now = Date.now();
 
         message.channel.createMessage("ping?")
-            .then((msg) => {
+            .then(async (msg) => {
                 const diff = (Date.now() - now);
 
-                msg.edit(`\`${diff}\`ms`)
+                await msg.edit(`\`${diff}\`ms`);
             });
     },
 })

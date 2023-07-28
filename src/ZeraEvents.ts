@@ -1,6 +1,7 @@
 import Eris from "eris";
 import ZeraClient from "./ZeraClient";
 import { GetConfig } from "../yaml";
+import Responses from "./constants/Responses";
 
 export default class ZeraEvents {
     private config = GetConfig();
@@ -17,9 +18,15 @@ export default class ZeraEvents {
                 let args = message.content.slice(this.config.commands.prefix.length).trim().split(" ");
                 const command = client.commands.get(args[0]);
                 if (command) {
-                    args = args.slice(0);
+                    args = args.slice(1);
 
-                    command.execute({ args, message, client });
+                    command.execute({
+                        args,
+                        message,
+                        client,
+                        guild: (<Eris.GuildChannel>message.channel).guild,
+                        responses: Responses
+                    });
                 }
             }
         }

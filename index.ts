@@ -12,7 +12,7 @@ const basePath = "./output/commands";
         await client.connect();
     } catch {
         client.logger.WriteLog("error", "unable to connect to discord");
-    };
+    }
     loadCommands();
     new ZeraEvents(client);
 })();
